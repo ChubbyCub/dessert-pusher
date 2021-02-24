@@ -18,6 +18,7 @@ package com.example.android.dessertpusher
 
 import android.content.ActivityNotFoundException
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
@@ -78,6 +79,12 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
 
         // Make sure the correct dessert is showing
         binding.dessertButton.setImageResource(currentDessert.imageId)
+        Log.i("MainActivity", "onCreate called")
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.i("MainActivity", "onStart called")
     }
 
     /**
